@@ -1,4 +1,3 @@
-import Section from "../components/Section";
 import ProjectCard from "../components/ProjectCard";
 import evacuationsystemImg from "../assets/ProjectImages/evacuationsystem.png";
 import clockImg from "../assets/ProjectImages/stampclock.png";

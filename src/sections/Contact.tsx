@@ -11,11 +11,7 @@ export default function Contact() {
     message: "",
   });
 
-  const API_URL =
-  import.meta.env.PROD
-    ? "https://portfolio-backend.onrender.com/api/contact"
-    : "http://localhost:5000/api/contact";
-
+ 
   const [status, setStatus] = useState("");
 
  function handleChange(

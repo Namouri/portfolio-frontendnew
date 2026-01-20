@@ -1,6 +1,4 @@
-import Section from "../components/Section";
 import ExperienceCard from "../components/ExperienceCard";
-import { useState } from "react";
 
 export default function About() {
  
