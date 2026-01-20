@@ -13,6 +13,7 @@ export default function Contact() {
 
  
   const [status, setStatus] = useState("");
+  const API_URL = import.meta.env.VITE_API_URL; 
 
  function handleChange(
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -27,7 +28,7 @@ export default function Contact() {
 
 
     try {
-      const res = await fetch("http://localhost:5000/api/contact", {
+      const res = await fetch(`${API_URL}/contact`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
