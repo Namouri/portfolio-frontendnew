@@ -36,7 +36,8 @@ export default function About() {
         skills={["Mathematics", "Problem‑solving", "Leadership", "Collaboration"]}
 
         description="I also participated in grading exams and collaborated with both  teaching assistants and professors to coordinate teaching and ensure fair assessments.."
-        />
+     hint
+     />
             <ExperienceCard
               title="Test Leader for PIA Project"
               period="Feb 2024 — Jun 2025"

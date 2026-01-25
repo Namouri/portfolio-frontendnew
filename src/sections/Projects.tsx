@@ -17,7 +17,7 @@ export default function Projects() {
           title="Creative Portfolio"
           description="An interactive personal portfolio built with React and TypeScript, featuring a clean, mobile‑friendly UI. It includes a Node.js backend powering the contact form, allowing visitors to send messages directly through the site."
           image={PortfolioImg}
-          github="https://github.com/Namouri"
+          github="https://github.com/Namouri/myportfolio"
           tech={["React", "TypeScript", "Javascript", "CSS", "Vite", "Node.js"]}
           status="done"
         />

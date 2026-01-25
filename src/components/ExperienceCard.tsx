@@ -1,11 +1,13 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 type Props = {
   title: string;
   period: string;
   summary: string;
   skills: string[];
   description: string;
-  onHover?: () => void;
+  hint?:boolean;
+  
+
 };
 
 
@@ -17,13 +19,40 @@ export default function ExperienceCard({
   summary,
   skills,
   description,
-  onHover,
+  hint=false,
 }: Props) {
     const [expanded, setExpanded] = useState(false);
+    const [showHint, setShowHint] = useState(hint);
+
+useEffect(() => {
+  if (!hint) return;
+
+  const timer = setTimeout(() => {
+    setShowHint(false);
+  }, 9000); 
+
+  return () => clearTimeout(timer);
+}, [hint]);
+
+    function handleClick() {
+  setShowHint(false);
+
+    // Only toggle on real touch devices
+    if (window.matchMedia("(hover: none) and (pointer: coarse)").matches) {
+      setExpanded((prev) => !prev);
+    }
+  }
+
 
   return (
-    <div className={`experience-card expandable ${expanded ? "expanded" : ""}`} onMouseEnter={onHover} onClick={() => setExpanded(!expanded)}
+  
+  <div
+      className={`experience-card expandable ${expanded ? "expanded" : ""}
+        ${showHint ? "hint" : ""}
+      `}
+      onClick={handleClick}
     >
+
         <h4>{title}</h4>
         <span className="period">{period}</span>
 
@@ -31,6 +60,7 @@ export default function ExperienceCard({
       <div className="full-description">
       <p>{description}</p>
       </div>
+
         <div className="skills">
           {skills.map((skill) => (
             <span key={skill} className="skill">
@@ -38,6 +68,7 @@ export default function ExperienceCard({
             </span>
           ))}
         </div>
+        {hint && showHint&& <span className="tap-pulse" />}
       </div>
 
     

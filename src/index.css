@@ -292,6 +292,14 @@ main {
   gap: 3rem;
 }
 
+@media (max-width: 900px) {
+  .about-layout {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+}
+
  .about-right {
   display: flex;
   flex-direction: column;
@@ -330,9 +338,16 @@ main {
   grid-template-columns: repeat(2, 1fr);
   gap: 1.5rem;
   max-width: 780px;
-  max-height: 1000px;
+  /*max-height: 1000px;*/
+  
   font-family: "Merriweather";
 
+}
+
+@media (max-width: 900px) {
+  .experience-cards {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* CARD SIZE CONTROL */
@@ -344,36 +359,63 @@ main {
   border: 1px solid rgba(255,255,255,0.08);
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  /*justify-content: space-between;*/
+  justify-content: flex-start;
   transition: transform 0.25s ease, background 0.25s ease;
-  
+  position: relative;
+  cursor: pointer;
 
 }
+
+.tap-pulse {
+  position: absolute;
+  top: 30%;
+  left: 90%;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: rgba(124, 124, 255, 0.8);
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  animation: tapPulse 1.4s ease-out 7;
+}
+
+@keyframes tapPulse {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0.9;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(3);
+    opacity: 0;
+  }
+}
+
+/* Remove pulse once user interacts */
+.experience-card:hover .tap-pulse,
+.experience-card.expanded .tap-pulse {
+  display: none;
+}
+
+
 
 
 .summary {
   font-size: 0.9rem;
 }
 
-.experience-card.expandable::after {
-  content: "";
-  position: absolute;
-  bottom: 60px;
-  left: 0;
-  right: 0;
-  height: 40px;
-  background: linear-gradient(
-    to bottom,
-    rgba(0,0,0,0),
-    rgba(20,20,40,0.9)
-  );
-  pointer-events: none;
+.full-description {
+  margin-top: 0.8rem;
+  font-size: 0.9rem;
+  line-height: 1.5;
 
-}
-
-.experience-card.expandable:hover::after {
   opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+
+  transition: opacity 0.25s ease, max-height 0.35s ease;
 }
+
 
 .period {
   align-self: flex-start;
@@ -405,56 +447,38 @@ main {
   border: 1px solid rgba(124,124,255,0.25);
 }
 
-.experience-card.expandable {
-  height: 300px;
-  overflow: hidden;
-  transition: height 0.35s ease, transform 0.25s ease;
-}
 
-/* EXPANDED HEIGHT */
-.experience-card.expandable:hover {
-  height: 495px; /* ← controls how much is revealed */
-  transform: translateY(-6px);
-}
+@media (hover: hover) and (pointer: fine) {
+  .experience-card.expandable:hover {
+    height: 495px;
+    transform: translateY(-6px);
+  }  
 
-.full-description {
-  margin-top: 0.8rem;
-  opacity: 0;
-  max-height: 0;
-  transition: opacity 0.25s ease;
-  font-size: 0.9rem;
-  line-height: 1.5;
-}
+  .experience-card.expandable:hover .full-description {
+    opacity: 1;
+    max-height: 500px;
+  }  
+}  
 
-.experience-card.expandable:hover .full-description {
-  opacity: 1;
-}
+/* =======================
+   MOBILE: TAP EXPAND
+======================= */   
 
+@media (hover: none) and (pointer: coarse) {
+  .experience-card {
+    cursor: pointer;
+    transform: none !important;
+  }  
 
-.experience-card:hover {
-  transform: translateY(-6px);
-  background: rgba(255,255,255,0.08);
-}
+  .experience-card.expandable.expanded {
+    height: 495px;
+  }  
 
-
-.experience-card h4 {
-  font-size: 1.1rem;
-    margin-bottom: 0.3rem;
-
-}
-
-.experience-card span {
-  font-size: 0.75rem;
-}
-
-.experience-card p {
-  margin-top: 0.6rem;
-  font-size: 0.9rem;
-  opacity: 0.85;
-}
-
-
-
+  .experience-card.expandable.expanded .full-description {
+    opacity: 1;
+    max-height: 500px;
+  }  
+}  
 
 
 /*CONATCT SECTION*/
@@ -706,32 +730,7 @@ section {
   transform: translateY(-2px);
 
 }
-/* INTERACTIVE MOUSE GLOW */
 
-/*.mouse-glow {
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  z-index: -1;
-}
-
-.mouse-glow::before {
-  content: "";
-  position: absolute;
-  width: 550px;
-  height: 550px;
-  background: radial-gradient(
-    circle,
-    rgba(124,124,255,0.18),
-    rgba(124,124,255,0.08),
-    transparent 20%
-  );
-  transform: translate(-50%, -50%);
-  left: var(--x, 50%);
-  top: var(--y, 50%);
-  transition: left 0.02s linear, top 0.02s linear;
-}
-*/
 
 .sparkle {
   position: fixed;
