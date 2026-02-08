@@ -370,14 +370,14 @@ main {
 .tap-pulse {
   position: absolute;
   top: 30%;
-  left: 90%;
-  width: 30px;
-  height: 30px;
+  left: 77%;
+  width: 35px;
+  height: 35px;
   border-radius: 50%;
-  background: rgba(124, 124, 255, 0.8);
+  background: rgba(124, 124, 255, 0.904);
   transform: translate(-50%, -50%);
   pointer-events: none;
-  animation: tapPulse 1.4s ease-out 7;
+  animation: tapPulse 1.7s infinite;
 }
 
 @keyframes tapPulse {
@@ -396,8 +396,6 @@ main {
 .experience-card.expanded .tap-pulse {
   display: none;
 }
-
-
 
 
 .summary {

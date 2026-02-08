@@ -6,6 +6,14 @@
   }
 }
 
+@media (max-width: 768px) {
+  .skills-grid {
+    justify-content: center;
+  }
+
+  
+}
+
 
 @media (hover: none) and (pointer: coarse) {
   .experience-card:hover,
@@ -25,7 +33,22 @@
   }
 
 }
+@media (max-width: 768px) {
+  .tap-pulse {
+    left: auto;
+    right: 10%;
+    top:30%;
+     width: 35px;
+  height: 35px;
 
+  }
+}
+
+@media (max-width: 768px){
+  .about-heading{
+    margin-top: -7rem;
+  }
+}
 
 .logo {
   height: 6em;

@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 type Props = {
   title: string;
   period: string;
@@ -24,15 +24,6 @@ export default function ExperienceCard({
     const [expanded, setExpanded] = useState(false);
     const [showHint, setShowHint] = useState(hint);
 
-useEffect(() => {
-  if (!hint) return;
-
-  const timer = setTimeout(() => {
-    setShowHint(false);
-  }, 9000); 
-
-  return () => clearTimeout(timer);
-}, [hint]);
 
     function handleClick() {
   setShowHint(false);
