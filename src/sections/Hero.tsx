@@ -14,7 +14,7 @@ export default function Hero() {
 
         <div className="hero-actions">
           <a href="#contact" className="project-btn">Contact me</a>
-          <a href="/Nour Amouri-CV.pdf" 
+          <a href="/CV-Nour Amouri.pdf" 
           download
           className="resume-btn">
             Download Resume</a>
