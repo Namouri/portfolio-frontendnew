@@ -7,11 +7,12 @@ type Props = {
   github:string;
   tech: string[];
   status?:"in-progress" | "done";
+  liveDemo?: string;
 
 };
 
 export default function ProjectCard({
-  title, description, image, github, tech, status }: Props) {
+  title, description, image, github, tech, status, liveDemo }: Props) {
 
   return (
       <div className="project-card">
@@ -38,6 +39,8 @@ export default function ProjectCard({
   >
     <FaGithub />
   </a> )}
+
+  
 </h3>
 
       <p>{description}</p>
@@ -49,6 +52,19 @@ export default function ProjectCard({
 
 
 </div>
+
+{liveDemo && (
+  <div className="project-demo-wrapper">
+    <a
+      href={liveDemo}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="live-demo-btn"
+    >
+       ▶ Live Demo
+    </a>
+  </div>
+)}
 
 
       

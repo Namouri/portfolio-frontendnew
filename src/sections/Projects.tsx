@@ -2,6 +2,9 @@ import ProjectCard from "../components/ProjectCard";
 import evacuationsystemImg from "../assets/ProjectImages/evacuationsystem.png";
 import clockImg from "../assets/ProjectImages/stampclock.png";
 import PortfolioImg from "../assets/ProjectImages/portfolioPic.png";
+import PendulumImg from "../assets/ProjectImages/pendulum.png";
+
+
 
 
 
@@ -20,6 +23,16 @@ export default function Projects() {
           github="https://github.com/Namouri/myportfolio"
           tech={["React", "TypeScript", "Javascript", "CSS", "Vite", "Node.js"]}
           status="done"
+        />
+
+        <ProjectCard
+          title="Inverted Pendulum Simulator"
+          description="A real‑time physics simulation of an unstable control system, built in C++ and compiled to WebAssembly. Uses RK4 integration and an LQR controller to keep the pendulum balanced, with interactive user control over applied force"
+          image={PendulumImg}
+          github="https://github.com/Namouri/Inverted-pendulum"
+          tech={["C++", "Linear Quadratic Regulator", "WebAssembly", "RK4 Physics Integration", "Javascript", "Riccati Equation", "Python"]}
+          status="done"
+          liveDemo="https://pendulum.nouramouri.com/"
         />
 
         <ProjectCard

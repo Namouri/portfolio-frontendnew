@@ -16,18 +16,35 @@ export default function About() {
           <h3 className="about-heading">
             I'm a <span>final‑year Computer Engineering student</span> at Örebro University with a background in <span>teaching</span>, <span>tech projects</span>, and <span>community work</span> . I enjoy building thoughtful solutions and learning from every experience along the way!
           </h3>
-
           <div className="experience-cards">
+          <ExperienceCard
+        title="Intern — AI, Robotics and Cybersecurity Center"
+        period="May 2026-present"
+            summary="Selected for the ARC Internship Program at Örebro University focused on AI, machine learning, and real-world innovation projects in collaboration with researchers and industry stakeholders."
+        skills={["AI", "Machine Learning", "LLMs", "Collaboration", "Research"]}
+
+        description="I collaborate on real-world AI, machine learning, and LLM challenges, contributing to the development of innovative pilot project solutions. I work closely with researchers, mentors, and industry stakeholders, and present project outcomes at the final showcase and demo." 
+        hint 
+     />
+     <ExperienceCard
+        title="Bachelor Thesis — AI-Based Image Analysis, Ekobot"
+        period="April 2026-present"
+            summary="Development of a machine learning system for automated pest detection in autonomous robotic systems."
+        skills={["Computer Vision", "Deep Learning", "CNNs", "Python", "Data Processing"]}
+
+        description="I design and train CNN models for image classification, process and structure large-scale image datasets, and optimize model accuracy and performance. The project also includes implementing solutions for real-time inference in an autonomous robotics context."
+     
+     />
+
         <ExperienceCard
         title="Teaching Assistant in Databases"
-        period="Nov 2025 — Present"
+        period="Nov 2025 — Jan 2026"
             summary="As a teaching assistant in Databases at Örebro University, I support students in their studies by answering questions 
         related to database theory and guiding them in ER modeling and SQL."
         skills={["SQL", "EER-Modeling", "Problem‑solving", "Leadership", "Collaboration"]}
 
         description="I also participate in grading assignments and 
         collaborate with other teaching assistants and course professors to ensure clear and fair assessment."
-       hint 
        />
         <ExperienceCard
         title="Teaching Assistant in Mathematics"
