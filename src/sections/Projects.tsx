@@ -3,6 +3,7 @@ import evacuationsystemImg from "../assets/ProjectImages/evacuationsystem.png";
 import clockImg from "../assets/ProjectImages/stampclock.png";
 import PortfolioImg from "../assets/ProjectImages/portfolioPic.png";
 import PendulumImg from "../assets/ProjectImages/pendulum.png";
+import EkbobotImg from "../assets/ProjectImages/ekobot_UI.png"
 
 
 
@@ -15,13 +16,12 @@ export default function Projects() {
       <h2 className="section-title">Projects</h2>
 
       <div className="projects-grid">
-      
-        <ProjectCard
-          title="Creative Portfolio"
-          description="An interactive personal portfolio built with React and TypeScript, featuring a clean, mobile‑friendly UI. It includes a Node.js backend powering the contact form, allowing visitors to send messages directly through the site."
-          image={PortfolioImg}
-          github="https://github.com/Namouri/myportfolio"
-          tech={["React", "TypeScript", "Javascript", "CSS", "Vite", "Node.js"]}
+         <ProjectCard
+          title="Ekobot Tooltip Defect Detection"
+          description="A full‑stack vision system for Ekobot that detects damaged or missing robot‑arm tooltips. It combines a fine‑tuned deep‑learning model with a live Flask dashboard connected to the ROS camera feed, classifying each tooltip as intact, damaged, or missing."          
+          image={EkbobotImg}
+          github="https://github.com/Namouri"
+          tech={["Python", "PyTorch", "Flask", "ROS", "OpenCV", "HTML","CSS","JavaScript"]}
           status="done"
         />
 
@@ -35,6 +35,14 @@ export default function Projects() {
           liveDemo="https://pendulum.nouramouri.com/"
         />
 
+        <ProjectCard
+          title="Creative Portfolio"
+          description="An interactive personal portfolio built with React and TypeScript, featuring a clean, mobile‑friendly UI. It includes a Node.js backend powering the contact form, allowing visitors to send messages directly through the site."
+          image={PortfolioImg}
+          github="https://github.com/Namouri/myportfolio"
+          tech={["React", "TypeScript", "Javascript", "CSS", "Vite", "Node.js"]}
+          status="done"
+        />
         <ProjectCard
           title="Stamp Clock System"
           description="A stamp‑clock system designed with Nielsen’s heuristics and Norman’s design principles, focusing on clarity, feedback, and simple user flow. Through iterative prototyping and testing, the interface was refined into an easy, predictable, and user‑friendly time‑tracking tool."
