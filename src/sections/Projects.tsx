@@ -4,6 +4,8 @@ import clockImg from "../assets/ProjectImages/stampclock.png";
 import PortfolioImg from "../assets/ProjectImages/portfolioPic.png";
 import PendulumImg from "../assets/ProjectImages/pendulum.png";
 import EkbobotImg from "../assets/ProjectImages/ekobot_UI.png"
+import VehicleRegistry from "../assets/ProjectImages/VehicleRegistry.png"
+
 
 
 
@@ -23,6 +25,16 @@ export default function Projects() {
           github="https://github.com/Namouri"
           tech={["Python", "PyTorch", "Flask", "ROS", "OpenCV", "HTML","CSS","JavaScript"]}
           status="done"
+        />
+
+        <ProjectCard
+          title="Vehicle Registry"
+          description="A C# and ASP.NET Core API built around a real registry challenge: no record is ever overwritten, and every lookup leaves a trace. Changes create new history entries, while access is logged automatically. Built with EF Core for data, SQLite for storage, xUnit for testing, and Azure for deployment"
+          image={VehicleRegistry}
+          github="https://github.com/Namouri/Vehicle-Registry"
+          tech={["c#","ASP.NET Core","Entity Framework Core","SQLite", "xUnit","Azure App Service"]}
+          status="done"
+          liveDemo="https://vehicleregistry-h7gse5egcyh5d6b2.westus3-01.azurewebsites.net/"
         />
 
         <ProjectCard

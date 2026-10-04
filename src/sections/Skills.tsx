@@ -15,7 +15,7 @@ export default function Skills() {
 
         <SkillCard
           title="Backend/Server Development"
-          skills={["Node.js", "Express.js", "REST API"]}
+          skills={["C#","ASP.NET","EF Core","Node.js", "Express.js", "REST API", "Flask"]}
         />
     
         <SkillCard
@@ -36,7 +36,7 @@ export default function Skills() {
 
         <SkillCard
           title="Tools & Workflow"
-          skills={["Vite", "npm", "Git"]}
+          skills={["Azure", "xUnit","SQLite","Vite", "npm", "Git"]}
         />
       </div>
       </div>

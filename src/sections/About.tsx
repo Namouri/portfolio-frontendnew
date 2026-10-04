@@ -14,11 +14,11 @@ export default function About() {
         {/* RIGHT — CONTENT */}
         <div className="about-right">
           <h3 className="about-heading">
-            I'm a <span>final‑year Computer Engineering student</span> at Örebro University with a background in <span>teaching</span>, <span>tech projects</span>, and <span>community work</span> . I enjoy building thoughtful solutions and learning from every experience along the way!
+            I'm a <span>recent Computer Engineering graduate</span> at Örebro University with a background in <span>teaching</span>, <span>tech projects</span>, and <span>community work</span> . I enjoy building thoughtful solutions and learning from every experience along the way!
           </h3>
           <div className="experience-cards">
           <ExperienceCard
-        title="Intern — AI, Robotics and Cybersecurity Center"
+        title="AI Engineer Intern — AI, Robotics and Cybersecurity Center"
         period="May 2026-present"
             summary="Selected for the ARC Internship Program at Örebro University focused on AI, machine learning, and real-world innovation projects in collaboration with researchers and industry stakeholders."
         skills={["AI", "Machine Learning", "LLMs", "Collaboration", "Research"]}
